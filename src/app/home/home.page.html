@@ -4,12 +4,29 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="isSkeletonShow">
-<swiper [config]="slideMultiMobile" >
-  <ng-template swiperSlide *ngFor="let test of [1,2,3,4,5,6]; let i = index">
-    <div>
-        HELLO
-    </div>
-  </ng-template>
-</swiper>
+<ion-content>
+  <ion-radio-group (ionChange)="onRadioValueChanged($event)">
+      <ion-item class="item-desc">
+        <ion-radio slot="start" mode="md" [value]="'test'"></ion-radio>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="12">
+           zyz
+          </ion-col>
+          <ion-col size="12">
+         <!--    <ion-item lines="none"> -->
+              <ion-button size="small" color="primary"
+                (click)="onIncreaseValue($event)">
+                <ion-icon name="remove"></ion-icon>
+              </ion-button>
+              <ion-input type="number" [value]="test" readonly></ion-input>
+              <ion-button  size="small" color="primary"
+                (click)="onIncreaseValue($event)">
+                <ion-icon slot="icon-only" name="add"></ion-icon>
+              </ion-button>
+           <!--  </ion-item> -->
+          </ion-col>
+        </ion-row>
+        <ion-text slot="end" color="dark">Henlo</ion-text>
+      </ion-item>
+  </ion-radio-group>
 </ion-content>
