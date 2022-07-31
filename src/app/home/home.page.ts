@@ -11,14 +11,16 @@ export class HomePage {
   test = 1;
   onRadioValueChanged(event: any) {
     console.log('radio trigger');
+    console.log(event);
   }
 
 
   onIncreaseValue(event: any) {
-    event.preventDefault();
-    event.stopPropagation();
+    // event.preventDefault();
+    // event.stopPropagation();
     console.log('on increase value');
     this.test += 1;
+    // return false;
   }
 
 }

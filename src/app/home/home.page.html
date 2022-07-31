@@ -5,28 +5,44 @@
 </ion-header>
 
 <ion-content>
-  <ion-radio-group (ionChange)="onRadioValueChanged($event)">
       <ion-item class="item-desc">
-        <ion-radio slot="start" mode="md" [value]="'test'"></ion-radio>
-        <ion-row class="ion-align-items-center">
-          <ion-col size="12">
-           zyz
-          </ion-col>
-          <ion-col size="12">
-         <!--    <ion-item lines="none"> -->
-              <ion-button size="small" color="primary"
-                (click)="onIncreaseValue($event)">
-                <ion-icon name="remove"></ion-icon>
-              </ion-button>
-              <ion-input type="number" [value]="test" readonly></ion-input>
-              <ion-button  size="small" color="primary"
-                (click)="onIncreaseValue($event)">
-                <ion-icon slot="icon-only" name="add"></ion-icon>
-              </ion-button>
-           <!--  </ion-item> -->
-          </ion-col>
-        </ion-row>
+        <ion-checkbox slot="start" mode="md" (ionChange)="onRadioValueChanged($event)"></ion-checkbox>
+          <ion-row class="ion-align-items-center"  style="    width: 100%;">
+            <ion-col size="4">Apple</ion-col>
+            <ion-col size="8">
+              <ion-item lines="none">
+                <ion-button size="small" color="primary" slot="start"
+                  (click)="onIncreaseValue($event)" [disabled]="true">
+                  <ion-icon name="remove"></ion-icon>
+                </ion-button>
+                <ion-text class="test-text">{{test}}</ion-text>
+                <ion-button  size="small" color="primary" slot="end"
+                  (click)="onIncreaseValue($event)">
+                  <ion-icon slot="icon-only" name="add"></ion-icon>
+                </ion-button>
+              </ion-item>
+              </ion-col>
+          </ion-row>
         <ion-text slot="end" color="dark">Henlo</ion-text>
       </ion-item>
-  </ion-radio-group>
+      <ion-item class="item-desc">
+        <ion-checkbox slot="start" mode="md" (ionChange)="onRadioValueChanged($event)"></ion-checkbox>
+          <ion-row class="ion-align-items-center" style="    width: 100%;">
+              <ion-col size="4">Ball</ion-col>
+              <ion-col  size="8" *ngIf="false">
+                <ion-item lines="none">
+                <ion-button size="small" color="primary" slot="start"
+                  (click)="onIncreaseValue($event)" [disabled]="true">
+                  <ion-icon name="remove"></ion-icon>
+                </ion-button>
+                <ion-text class="test-text">{{test}}</ion-text>
+                <ion-button  size="small" color="primary" slot="end"
+                  (click)="onIncreaseValue($event)">
+                  <ion-icon slot="icon-only" name="add"></ion-icon>
+                </ion-button>
+              </ion-item>
+              </ion-col>
+          </ion-row>
+        <ion-text slot="end" color="dark">Henlo</ion-text>
+      </ion-item>
 </ion-content>
