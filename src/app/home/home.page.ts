@@ -7,13 +7,18 @@ import { Component, AfterViewInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage {
-
   test = 1;
-  onRadioValueChanged(event: any) {
-    console.log('radio trigger');
-    console.log(event);
-  }
+  hiddenSelected = false;
+  ngIfSelected = false;
 
+  onRadioValueChanged(event: any, type: 'hidden' | 'ngIf') {
+    console.log('radio trigger');
+    if(type === 'hidden') {
+      this.hiddenSelected = !this.hiddenSelected;
+    } else {
+      this.ngIfSelected = !this.ngIfSelected;
+    }
+  }
 
   onIncreaseValue(event: any) {
     // event.preventDefault();
