@@ -5,28 +5,216 @@
 </ion-header>
 
 <ion-content>
+  <h1>
+    *ngIf hide increment decrement star 
+  </h1>
   <ion-radio-group (ionChange)="onRadioValueChanged($event)">
-      <ion-item class="item-desc">
-        <ion-radio slot="start" mode="md" [value]="'test'"></ion-radio>
-        <ion-row class="ion-align-items-center">
-          <ion-col size="12">
-           zyz
-          </ion-col>
-          <ion-col size="12">
-         <!--    <ion-item lines="none"> -->
-              <ion-button size="small" color="primary"
-                (click)="onIncreaseValue($event)">
-                <ion-icon name="remove"></ion-icon>
-              </ion-button>
-              <ion-input type="number" [value]="test" readonly></ion-input>
-              <ion-button  size="small" color="primary"
-                (click)="onIncreaseValue($event)">
-                <ion-icon slot="icon-only" name="add"></ion-icon>
-              </ion-button>
-           <!--  </ion-item> -->
-          </ion-col>
-        </ion-row>
-        <ion-text slot="end" color="dark">Henlo</ion-text>
-      </ion-item>
+    <ion-item class="item-desc">
+      <ion-radio slot="start" mode="md"></ion-radio>
+      <ion-row class="ion-align-items-center" style="width: 100%">
+        <ion-col size="4">
+          Test
+        </ion-col>
+        <ion-col size="8" *ngIf="false">
+          <ion-item lines="none">
+            <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+              <ion-icon slot="icon-only" name="remove"></ion-icon>
+            </ion-button>
+            <ion-text> {{test}}</ion-text>
+            <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+              <ion-icon slot="icon-only" name="add"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-button  *ngIf="false" slot="end" color="dark" style="margin:0">
+        <ion-icon name="star" slot='icon-only'>
+        </ion-icon>
+      </ion-button>
+    </ion-item>
   </ion-radio-group>
+
+  <ion-item class="item-desc">
+    <ion-checkbox slot="start" mode="md"></ion-checkbox>
+    <ion-row class="ion-align-items-center" style="width: 100%">
+      <ion-col size="4">
+        Test
+      </ion-col>
+      <ion-col size="8" *ngIf="false">
+        <ion-item lines="none">
+          <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+            <ion-icon slot="icon-only" name="remove"></ion-icon>
+          </ion-button>
+          <ion-text> {{test}}</ion-text>
+          <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+            <ion-icon slot="icon-only" name="add"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-button *ngIf="false" slot="end" color="dark" style="margin:0">
+      <ion-icon name="star" slot='icon-only'>
+      </ion-icon>
+    </ion-button>
+  </ion-item>
+
+
+  <h1>visible increment decrement</h1>
+  <ion-radio-group (ionChange)="onRadioValueChanged($event)">
+    <ion-item class="item-desc">
+      <ion-radio slot="start" mode="md"></ion-radio>
+      <ion-row class="ion-align-items-center" style="width: 100%">
+        <ion-col size="4">
+          Test
+        </ion-col>
+        <ion-col size="8">
+          <ion-item lines="none">
+            <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+              <ion-icon slot="icon-only" name="remove"></ion-icon>
+            </ion-button>
+            <ion-text> {{test}}</ion-text>
+            <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+              <ion-icon slot="icon-only" name="add"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-button slot="end" color="dark" style="margin:0">
+        <ion-icon name="star" slot='icon-only'>
+        </ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-radio-group>
+
+  <ion-item class="item-desc">
+    <ion-checkbox slot="start" mode="md"></ion-checkbox>
+    <ion-row class="ion-align-items-center" style="width: 100%">
+      <ion-col size="4">
+        Test
+      </ion-col>
+      <ion-col size="8">
+        <ion-item lines="none">
+          <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+            <ion-icon slot="icon-only" name="remove"></ion-icon>
+          </ion-button>
+          <ion-text> {{test}}</ion-text>
+          <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+            <ion-icon slot="icon-only" name="add"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-button slot="end" color="dark" style="margin:0">
+      <ion-icon name="star" slot='icon-only'>
+      </ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <h1>
+    hidden increment decrement
+  </h1>
+  <ion-radio-group (ionChange)="onRadioValueChanged($event)">
+    <ion-item class="item-desc">
+      <ion-radio slot="start" mode="md"></ion-radio>
+      <ion-row class="ion-align-items-center" style="width: 100%">
+        <ion-col size="4">
+          Test
+        </ion-col>
+        <ion-col size="8" hidden="true">
+          <ion-item lines="none">
+            <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+              <ion-icon slot="icon-only" name="remove"></ion-icon>
+            </ion-button>
+            <ion-text> {{test}}</ion-text>
+            <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+              <ion-icon slot="icon-only" name="add"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-button slot="end" color="dark" style="margin:0">
+        <ion-icon name="star" slot='icon-only'>
+        </ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-radio-group>
+
+  <ion-item class="item-desc">
+    <ion-checkbox slot="start" mode="md"></ion-checkbox>
+    <ion-row class="ion-align-items-center" style="width: 100%">
+      <ion-col size="4">
+        Test
+      </ion-col>
+      <ion-col size="8" hidden="true">
+        <ion-item lines="none">
+          <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+            <ion-icon slot="icon-only" name="remove"></ion-icon>
+          </ion-button>
+          <ion-text> {{test}}</ion-text>
+          <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+            <ion-icon slot="icon-only" name="add"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-button slot="end" color="dark" style="margin:0">
+      <ion-icon name="star" slot='icon-only'>
+      </ion-icon>
+    </ion-button>
+  </ion-item>
+
+
+  <h1>
+    *ngIf hide increment decrement 
+  </h1>
+  <ion-radio-group (ionChange)="onRadioValueChanged($event)">
+    <ion-item class="item-desc">
+      <ion-radio slot="start" mode="md"></ion-radio>
+      <ion-row class="ion-align-items-center" style="width: 100%">
+        <ion-col size="4">
+          Test
+        </ion-col>
+        <ion-col size="8" *ngIf="false">
+          <ion-item lines="none">
+            <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+              <ion-icon slot="icon-only" name="remove"></ion-icon>
+            </ion-button>
+            <ion-text> {{test}}</ion-text>
+            <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+              <ion-icon slot="icon-only" name="add"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-button slot="end" color="dark" style="margin:0">
+        <ion-icon name="star" slot='icon-only'>
+        </ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-radio-group>
+
+  <ion-item class="item-desc">
+    <ion-checkbox slot="start" mode="md"></ion-checkbox>
+    <ion-row class="ion-align-items-center" style="width: 100%">
+      <ion-col size="4">
+        Test
+      </ion-col>
+      <ion-col size="8" *ngIf="false">
+        <ion-item lines="none">
+          <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+            <ion-icon slot="icon-only" name="remove"></ion-icon>
+          </ion-button>
+          <ion-text> {{test}}</ion-text>
+          <ion-button size="small" color="primary" (click)="onIncreaseValue($event)">
+            <ion-icon slot="icon-only" name="add"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-button slot="end" color="dark" style="margin:0">
+      <ion-icon name="star" slot='icon-only'>
+      </ion-icon>
+    </ion-button>
+  </ion-item>
+
 </ion-content>
