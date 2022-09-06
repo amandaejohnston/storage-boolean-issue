@@ -7,15 +7,23 @@ import { Component, AfterViewInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage {
-  test = 1;
+  tabs = [{
+    id: 1,
+    name: 'Ionic'
+  }, {
+    id: 2,
+    name: 'Angular'
+  }, {
+    id: 3,
+    name: 'React'
+  }, {
+    id: 4,
+    name: 'Vue'
+  }];
+  selectedTab = 1;
 
-  onRadioValueChanged(event: any) {
-    console.log('radio trigger');
+
+  onSelectedTab(tab) {
+    this.selectedTab = tab.id;
   }
-
-  onIncreaseValue(event: any) {
-    console.log('on increase value');
-    this.test += 1;
-  }
-
 }
