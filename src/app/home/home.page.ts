@@ -1,8 +1,5 @@
 /* eslint-disable no-underscore-dangle */
 import { Component, AfterViewInit } from '@angular/core';
-import SwiperCore, { Pagination, SwiperOptions } from 'swiper';
-
-SwiperCore.use([Pagination]);
 
 @Component({
   selector: 'app-home',
@@ -11,11 +8,6 @@ SwiperCore.use([Pagination]);
 })
 export class HomePage {
   isSkeletonShow = true;
-  slideMultiMobile = {
-    slidesPerView: 1.2,
-    spaceBetween: 10,
-    loop: true,
-  };
 
   // eslint-disable-next-line @angular-eslint/use-lifecycle-interface
   async ngOnInit() {

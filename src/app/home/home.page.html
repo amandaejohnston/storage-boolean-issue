@@ -5,11 +5,9 @@
 </ion-header>
 
 <ion-content *ngIf="isSkeletonShow">
-<swiper [config]="slideMultiMobile" >
-  <ng-template swiperSlide *ngFor="let test of [1,2,3,4,5,6]; let i = index">
-    <div>
-        HELLO
-    </div>
-  </ng-template>
-</swiper>
+  <swiper-container [slidesPerView]="1.2" [spaceBetween]="10" [loop]="true">
+    <swiper-slide *ngFor="let test of [1,2,3,4,5,6]; let i = index">
+      HELLO
+    </swiper-slide>
+  </swiper-container>
 </ion-content>
